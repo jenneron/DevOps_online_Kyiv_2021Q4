@@ -1,0 +1,30 @@
+06547f6 HEAD@{0}: merge develop: Fast-forward
+9ee16f0 HEAD@{1}: checkout: moving from develop to master
+06547f6 HEAD@{2}: commit (amend): m1/task1.1: add styles (Merge branch 'styles' into develop)
+2e77c0b HEAD@{3}: commit (amend): Merge branch 'styles' into develop
+1e8b10e HEAD@{4}: commit (merge): Merge branch 'styles' into develop
+1473d72 HEAD@{5}: merge images: Fast-forward
+81180e4 HEAD@{6}: checkout: moving from styles to develop
+ebe5188 HEAD@{7}: commit: m1/task1.1: add changes with styles to index.html
+409415b HEAD@{8}: commit (amend): m1/task1.1: add styles
+116c481 HEAD@{9}: commit (amend): m1/task1.1: add styles
+38c0b1d HEAD@{10}: commit (amend): m1/task1.1: add styles
+1bd2957 HEAD@{11}: commit (amend): m1/task1.1: add styles
+dc0eb93 HEAD@{12}: checkout: moving from images to styles
+1473d72 HEAD@{13}: commit (amend): m1/task1.1: add changes with images to index.html
+15a1abb HEAD@{14}: checkout: moving from styles to images
+dc0eb93 HEAD@{15}: checkout: moving from images to styles
+15a1abb HEAD@{16}: commit: m1/task1.1: add changes with images to index.html
+7b5b6d6 HEAD@{17}: checkout: moving from styles to images
+dc0eb93 HEAD@{18}: commit: m1/task1.1: add styles
+81180e4 HEAD@{19}: checkout: moving from develop to styles
+81180e4 HEAD@{20}: checkout: moving from images to develop
+7b5b6d6 HEAD@{21}: cherry-pick: m1/task1.1: add images
+81180e4 HEAD@{22}: checkout: moving from develop to images
+6f16550 HEAD@{27}: checkout: moving from images to develop
+68c4d7c HEAD@{38}: commit: m1/task1.1: add images
+6f16550 HEAD@{39}: checkout: moving from develop to images
+6f16550 HEAD@{40}: commit: add index.html
+9ee16f0 HEAD@{41}: checkout: moving from master to develop
+9ee16f0 HEAD@{42}: commit (amend): initial commit
+5c494ac HEAD@{43}: commit (initial): initial commit
