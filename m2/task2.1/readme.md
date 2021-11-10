@@ -31,3 +31,12 @@ There are two types of hypervisors:
 ### Shared folder
 
 ![image](shared_folder.png)
+
+### VBoxManage list
+
+```console
+$ VBoxManage list vms
+"VM1_Bambura" {96a8554e-ec5a-4f99-939c-ac5cd882d503}
+"VM2_Bambura" {b3c994e6-6ca0-469c-b0d2-a2f56676b337}
+"VM1_Bambura (import)" {4c935e6f-933b-4878-a680-97f52aef8850}
+```
