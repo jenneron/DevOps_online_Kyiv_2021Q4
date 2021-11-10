@@ -40,3 +40,39 @@ $ VBoxManage list vms
 "VM2_Bambura" {b3c994e6-6ca0-469c-b0d2-a2f56676b337}
 "VM1_Bambura (import)" {4c935e6f-933b-4878-a680-97f52aef8850}
 ```
+
+## Part 3. WORK WITH VAGRANT
+
+### Date command executed in VM
+
+```console
+$ ssh -p 2222 vagrant@127.0.0.1
+The authenticity of host '[127.0.0.1]:2222 ([127.0.0.1]:2222)' can't be established.
+ECDSA key fingerprint is SHA256:+zgKqxyYlTBxVO0xtTVGBokreS9Zr71wQGvnG/k2igw.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '[127.0.0.1]:2222' (ECDSA) to the list of known hosts.
+vagrant@127.0.0.1's password: 
+Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+Your Ubuntu release is not supported anymore.
+For upgrade information, please visit:
+http://www.ubuntu.com/releaseendoflife
+
+New release '14.04.6 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Welcome to your Vagrant-built virtual machine.
+Last login: Fri Sep 14 06:23:18 2012 from 10.0.2.2
+vagrant@precise64:~$ date
+Wed Nov 10 16:34:13 UTC 2021
+```
+
+### Packaging a box
+
+```console
+$ vagrant package --output ubuntu_nginx.box
+==> default: Exporting VM...
+==> default: Compressing package to: /mnt/8664818a-863b-491f-af74-3a976a33c843/bambura/ubuntu_nginx.box
+```
