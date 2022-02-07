@@ -208,3 +208,65 @@ mysql> SELECT * FROM global_grants WHERE user = 'root';
 +------+-----------+-----------------------------+-------------------+
 32 rows in set (0.00 sec)
 ```
+
+## Part 2
+
+### 10.Make backup of your database.
+
+```console
+user@pc-vm:~$ sudo mysqldump -u root -p store > backup.sql
+Enter password: 
+user@pc-vm:~$ ls backup.sql 
+backup.sql
+```
+
+### 11.Delete the table and/or part of the data in the table.
+
+```sql
+mysql> USE store;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> DROP TABLE orders;
+Query OK, 0 rows affected (4.71 sec)
+
+mysql> SELECT * FROM orders;
+ERROR 1146 (42S02): Table 'store.orders' doesn't exist
+```
+
+### 12.Restore your database.
+
+
+```sql
+user@pc-vm:~$ sudo mysql -u root -p store < backup.sql 
+Enter password: 
+user@pc-vm:~$ sudo mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 18
+Server version: 8.0.27-0ubuntu0.20.04.1 (Ubuntu)
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> USE store;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> SELECT * FROM orders;
++----+---------+------------+
+| id | user_id | product_id |
++----+---------+------------+
+|  1 |       2 |          1 |
+|  2 |       3 |          2 |
+|  3 |       2 |          3 |
++----+---------+------------+
+3 rows in set (0.00 sec)
+```
